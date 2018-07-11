@@ -1,0 +1,552 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(#c3c3c3, #fff);
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.cf{
+    clear: both;
+}
+
+.maincontainer {
+    width: 990px;
+    margin: 0 auto;
+    background-color: #fff;
+    display: grid;
+}
+
+.tophead{
+    display: grid;
+    /* border: 1px solid black; */
+    grid-template-columns: 1.3fr 1.5fr 0.5fr;
+    grid-template-rows: 1fr;
+}
+
+#logotipo {
+    top: 0;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+.logo.logo1{
+    background-image: url("imagens/logo1.jpg");
+}
+
+.logo.logo2{
+    background-image: url("imagens/logo2.jpg");
+}
+
+.logo.logo3{
+    background-image: url("imagens/logo3.jpg");
+}
+
+.logo.logo4{
+    background-image: url("imagens/logo4.jpg");
+}
+
+.logo.logo5{
+    background-image: url("imagens/logo5.jpg");
+}
+
+.logo.logo6{
+    background-image: url("imagens/logo6.jpg");
+}
+
+.logo.logo7{
+    background-image: url("imagens/logo7.jpg");
+}
+
+.logo.logo8{
+    background-image: url("imagens/logo8.jpg");
+}
+
+.logo.logo9{
+    background-image: url("imagens/logo9.jpg");
+}
+
+.logo.logo10{
+    background-image: url("imagens/logo10.jpg");
+}
+
+#searchbar{
+    align-self: center;
+    min-width: 0;
+    min-height: 0;
+}
+
+#searchbar > form{
+    position: relative;
+}
+
+#search {
+    padding-left: 5px;
+    width: 200px;
+    height: 30px;
+    /* background: url(imagens/lupa_sprites.png);
+    background-repeat: no-repeat;
+    background-position: right 10px;  */
+    position: relative;
+    align-self: center;
+    left: 40px;
+    user-select: none;
+    /* border: 1px solid black; */
+    transition: width 1s ease-in-out;
+}
+
+#search:focus{
+    width: 400px;
+    outline: none;
+}
+
+#lupasubmit{
+    border: none;
+    background-color: white;
+    background: url("imagens/lupa_sprites.png") 0 0;
+    position: relative;
+    height: 16px;
+    width: 16px;
+    top: 2px;
+    left: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#lupasubmit:hover{
+    background-position: 0 32px;
+}
+
+#lupasubmit:active{
+    background-position: 0 16px;
+}
+
+.lightboxandsmedia{
+    align-self: end;
+    justify-self: end;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.lightboxandsmedia > div > a > i{
+    font-size: 18px;
+    color: #AFB0B2;
+    user-select: none;
+}
+
+.lightboxandsmedia > div > a > i:hover{
+    color: black;
+}
+
+.localidade{
+    width: 75px;
+    height: 30px;
+    position: relative;
+    left: 5px;
+    bottom: 45px;
+    border: 1px solid transparent;
+    background-color: #F15922;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    margin-right: 0;
+}
+
+.localidade > p{
+    position: relative;
+    text-align: center;
+    bottom: 10px;
+}
+
+.smedia{
+    margin-right: 5px;
+}
+
+nav{
+    display: grid;
+    grid-template-rows: 1fr;
+    border: 1px solid grey;
+    height: 40px;
+}
+
+#menu {
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+    justify-self: end;
+    padding-left: 0;
+}
+
+#menu > li {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 50px;
+    position: relative;
+}
+
+#menu > li > a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+#menu > li > a:hover{
+    color: white;
+    background-color: #1f253c;
+}
+
+.submenu {
+    margin: 0;
+    padding: 0;
+    display: none;
+    list-style-type: none;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    top: 39px;
+}
+
+.submenu > li > a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    background-color: #686f79;
+    padding: 10px;
+    margin-bottom: 1px solid #b7bac3;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.submenu > li > a:hover{
+background-color: #444a51;
+}
+
+#menu > li:hover > .submenu {
+    display: block;
+}
+
+
+.breadcrumbsData{
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-top: 10px;
+}
+
+.breadcrumbsData > p{
+    display: inline;
+    margin: 0;
+}
+
+.breadcrumbsData > p > span:first-of-type{
+    margin-left: 10px;
+    color: grey;
+    cursor: pointer;
+
+}
+
+#data {
+    justify-self: end;
+    margin-right: 10px;
+    float: right;
+}
+
+.sidemain{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.5fr 2fr;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.promocoes{
+    border-right: 1px dashed gainsboro;
+}
+
+.sidemain> .promocoes > figure{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.sidemain > .promocoes > figure > a > img:hover{
+    box-shadow: 3px 3px 5px black;
+}
+
+.sidemain > .promocoes > figure > a:hover ~ figcaption {
+    font-weight: bold;
+}
+
+.promocoes figcaption{
+    text-align: center;
+}
+
+.cfh{
+    clear: both;
+}
+
+#bookcontent{
+    position: relative;
+    margin-top: 15px;
+}
+
+#bookcontent > img{
+    float: left;
+    margin-left: 25px;
+}
+
+.bookinfo{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 200px;
+    text-align: left;
+}
+
+.bookinfo > h1{
+    position: relative;
+    bottom: 5px;
+}
+
+.bookinfo > p:first-of-type{
+    margin-bottom: 10px;
+}
+
+.bookinfo > p{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+.balaoChat {
+	position: relative;
+	background: #ff0000;
+    border-radius: .4em;
+    width: 60px;
+    text-align: center;
+    left: 125px;
+    display: inline;
+    padding: 10px;
+    color: white;
+}
+
+.balaoChat:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 40%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #ff0000;
+	border-bottom: 0;
+	margin-left: -10px;
+	margin-bottom: -10px;
+}
+
+.balaocinzento {
+    background: grey;
+}
+
+.balaocinzento:after{
+    border-top-color: grey;
+}
+
+.balaoverde{
+    background: green;
+}
+
+.balaoverde:after{
+    border-top-color: green;
+}
+
+#nome{
+    width: 255px;
+}
+
+#comenttitle {
+    width: 255px;
+}
+
+
+
+footer{
+    display: grid;
+    grid-template-rows: 1fr;
+    display: inline;
+    background-color: gray;
+    font-size: 10px;
+    text-align: center;
+}
+
+footer > p{
+    padding: 0;
+}
+
+.referencias{
+    margin-top: 5px;
+}
+
+.ao{
+    position: absolute;
+    width: 121px;
+    height: 50px;
+    top: 50%;
+    right: 90vw;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-top-right-radius: 20%;
+    transform: translateX(-10px);
+}
+
+.ao:hover{
+    height: 138px;
+    cursor: pointer;
+}
+
+#cookies{
+    width: 100%;
+    font-size: 0.75em;
+    text-align: center;
+    background-color: black;
+    /* opacity: ; */
+    color: white;
+    z-index: 1;
+    /* display: none; */
+} 
+
+#cookies > p{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.cookiebutton{
+    display: inline-block;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.sticker {
+    background: linear-gradient(135deg, rgba(255,214,214,1) 0%, rgba(255,214,214,1) 0%, rgba(255,214,214,1) 18%, rgba(255,0,0,1) 51%, rgba(255,214,214,1) 92%);
+    border: 1px solid white;
+    height: 100px;
+    width: 100px;   
+    position: absolute;
+    border-radius: 50%;
+    top: 7%;
+    right: 56%;
+}
+
+.sticker > span{
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    top: 30px;
+    text-align: center;
+    cursor: context-menu;
+    user-select: none;
+}
+
+#tela {
+    position: fixed;
+    background-color: black;
+
+    /* width: 100%;
+    height: 100%; */
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+    display: none;
+}
+
+#popup {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    margin-left: -150px;
+    margin-top: -150px;
+    display: block;
+}
+
+#popup > p{
+    color: #894a7d;
+    font-size: 16px; 
+    text-align: center;
+    font-weight: bold;
+}
+
+#popup > ul {
+    list-style: none;
+    border: 1px solid gainsboro;
+    margin: 15px;
+    text-align: center;
+    padding-left: 0;
+}
+
+#popup > ul > li{
+    padding: 10px 50px;
+    color: #F15922; 
+    user-select: none;
+    border-bottom: 1px solid gainsboro
+}
+
+#popup > ul > li:last-child{
+    border-bottom: none;
+}
+
+#popup > ul > li:hover{
+    color: #fff;
+    background-color: #F15922;
+    cursor: pointer;
+}
+
+.fecha_popup {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #F15922;
+    border: 2px solid #999;
+    border-radius: 100%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: #000 1px 1px  5px;
+    user-select: none;
+    color: white;
+}
+
+.fecha_popup:active {
+    box-shadow: none;
+    top: -9px;
+    right: -11px;
+}

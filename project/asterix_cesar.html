@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wook</title>
+    <link rel="stylesheet" href="paginaasterix.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui.theme.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="pagina1.js"></script>
+    <!--[if lt IE 9]>
+	   <script src="js/html5shivmin.js"></script>
+    <![endif]-->
+    
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
+
+</head>
+<body>
+<section class="maincontainer">
+    <header>
+        <section class="tophead">
+            <div id="logotipo">
+                <a href="index.html" class="logo">
+                    
+                </a>
+            </div>
+        <section id="searchbar">
+            <form action="pesquisa.php">
+                <label for="search"></label><input type="text" id="search" name="search" maxlength="50" size="50" required autofocus placeholder="Pesquisa">
+                <input type="submit" id="lupasubmit" name="lupasubmit" value="">
+            </form>
+        </section>
+        <section class="lightboxandsmedia">
+            <div class="localidade">
+        
+            </div>
+            <div class="smedia">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
+        </section>
+
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Ensino</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Livros escolares</a>
+                        </li>
+                        <li>
+                            <a href="#">Auxiliares de ensino</a>
+                        </li>
+                        <li>
+                            <a href="#">Livros escolares</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li><a href="#">Internacional</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Livros em francês</a>
+                        </li>
+                        <li>
+                            <a href="#">Livros em inglês</a>
+                        </li>
+                        <li>
+                            <a href="#">Livros em espanhol</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">eBooks</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Em português</a>
+                        </li>
+                        <li>
+                            <a href="#">Em inglês</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="breadcrumbsData">
+            <p>
+                <span><a>Início</a></span>
+                <span id="data"></span>
+            </p>
+        </section> 
+        <section class="sidemain">
+            <section class="promocoes">
+                <h1>Promoções</h1>
+                <figure>
+                    <a href="#"><img src="imagens/No%20teu%20Olhar.jpg"></a>
+                    <figcaption>No teu olhar </figcaption>
+                    <figcaption>15€</figcaption>
+                </figure>
+                <figure>
+                    <a href="#"><img src="imagens/O%20amante%20japon%C3%AAs.jpg"></a>
+                    <figcaption>O amante japonês </figcaption>
+                    <figcaption>25€</figcaption>
+                </figure>
+                <figure>
+                    <a href="#"><img src="imagens/As%20Flores%20de%20L%C3%B3tus.jpg"></a>
+                    <figcaption>As flores de lótus</figcaption>
+                    <figcaption>28€</figcaption>
+                </figure>
+            </section>
+            <section id="bookcontent">
+                <img src="imagens/Astérix - O Papiro de César.jpg">
+                <div class="bookinfo cfh">
+                    <h1>Àsterix - O Papiro de César</h1>
+                    <p>Didier Conrad, Jean-Yves Ferri</p>
+                    <p>Edição/reimpressão: <strong>2015</strong></p>
+                    <p>Páginas: <strong>48</strong></p>
+                    <p>Editor: <strong>Edições Asa</strong></p>
+                    <p>ISBN: <strong>9789892333289</strong></p>
+                </div>
+                <div class="balaoChat">POUPE 50%</div>
+                <div class="balaoChat balaocinzento">ENVIO GRÁTIS</div>
+                <div class="balaoChat balaoverde">ENTREGA 24H</div>
+                <div id="tabs">
+                  <ul>
+                    <li><a href="#tabs-1">SINOPSE</a></li>
+                    <li><a href="#tabs-2">COMENTÁRIOS</a></li>
+                    <li><a href="#tabs-3">AUTOR</a></li>
+                    <li><a href="#tabs-4">CARACTERÍSTICAS</a></li>
+                  </ul>
+                  <div id="tabs-1">
+                    <p class="cf">Novo álbum das aventuras de Astérix (o nº 36), assinado pela nova dupla de autores que já foi responsável pelo álbum anterior (Astérix entre os Pictos). O lançamento será simultâneo em todo o mundo e ocorrerá em 22 de outubro de 2015. Os pormenores sobre este novo álbum estiveram (e em grande parte continuam) envoltos no mais rigoroso sigilo.</p>
+                  </div>
+                  <div id="tabs-2">
+                    <p class="cf">Coloque aqui o seu comentário</p>
+                    <form id="commentform" action="comentarios.php">
+                        <p><label for="nome">Nome:</label> <input type="text" id="nome" name="nome" maxlength="50" size="50" required autofocus>
+                        <p></p><label for="comenttitle">Título do comentário:</label> <input type="text" id="comenttitle" name="comenttitle" maxlength="50" size="50" required autofocus></p>
+                        <p><label for="comment">Comentário:</label> <textarea id="comment" name="comment" cols="80" rows="5" required></textarea></p>
+                    </form>
+                    <div></div>
+                    <p>*campos de preenchimento obrigatório</p>
+                    <p><input type="reset" id="btLimpa" name="btLimpa" value="LIMPAR &#10060;"><input type="submit" id="btSubmit" name="btSubmit" value="ENVIAR"></p>
+                  </div>
+                  <div id="tabs-3">
+                    <p class="cf"><strong>Didier Conrad</strong></p>
+                    <p>Desenhador - Em 1973 dá os seus primeiros passos no mundo da BD, através de uma Carte Blanche publicada no Journal de Spirou. Sob o pseudónimo de Pierce, inicia Kid Lucky, série que narra a infância do Lucky Luke de Morris, Em 2011 cria a série Marsu Kids, mais uma série derivada, desta feita a partir das aventuras do divertido Marsupilami, animal mítico inventado por Franquin. Uma obra rica, um traço reconhecível e respeitado, e cores (...)</p>
+                    <p><strong>Jean-Yves Ferri</strong></p>
+                    <p>Argumentista - Em 1996, publica o seu primeiro álbum de BD, Les Fables Autonomes (2 volumes publicados). Continua com as aventuras do seu polícia rural, Aimé Lacapelle, uma figura que haveria de tornar-se mítica no seio da Polícia Montada do Tarn, e de que serão publicados quatro álbuns entre 2000 e 2007.Em 1995 conhece, em Paris, o seu futuro coautor para o desenho: Manu Larcenet. Este encontro leva à criação da célebre série Le Retour à la Terre, de que Ferri será o argumentista e que conta já com 7 (...)</p>
+                  </div>
+                  <div id="tabs-4">
+                    <p class="cf">Dimensões: 225 x 285 x 5 mm</p>
+                    <p>Tipo de Produto: <strong>Livro</strong></p>
+                    <ul>
+                        <li>Livros em Português</li>
+                        <li>Banda Desenhada > Humor</li>
+                    </ul>
+                  </div>
+                </div>
+            </section>
+        </section>
+    </main>
+   
+  
+    <footer>
+        <div class="referencias">
+            <a href="#">Cartão Wookmais</a><span>|</span>
+            <a href="#">Programa de Afiliados</a><span>|</span>
+            <a href="#">Condições gerais de venda</a><span>|</span>
+            <a href="#">Compras 100% seguras</a><span>|</span>
+            <a href="#">Política de Privacidade</a><span>|</span>
+            <a href="#">Ajuda</a>
+        </div>
+            <p>&copy;1999/2015 Grupo Porto Editora. Todos os direitos reservados, Porto, Portugal | Este site está conforme  o novo Acordo Otográfico.</p>
+            <p>Salvo indicação em contrário, os descontos apresentados referem-se a promoções válidas para o dia 03-12-2015</p>
+    </footer>
+        <div class="sticker"><span>Promoção de natal</span></div>
+        <div id="cookies">
+            <p>Este site utiliza cookies para lhe proporcionar uma melhor experiência de navegação. Ao navegar estará a consentir a sua utilização.</p>
+            <p>Saiba mais sobre a nossa politica de privacidade. Tomei conhecimento e não desejo visualizar esta informação novamente.</p>
+            <button class="cookiebutton">OK</button>
+        </div>
+        <div id="tela"></div>
+        <div id="popup">
+            <p>Escolha a localidade da sua preferência</p>
+            <span class="fecha_popup noselect">X</span>
+        </div>
+        <div class="ao">
+                <img src="imagens/acordo_ortografico.png">
+        </div> 
+    </section>
+</body>
+</html>
